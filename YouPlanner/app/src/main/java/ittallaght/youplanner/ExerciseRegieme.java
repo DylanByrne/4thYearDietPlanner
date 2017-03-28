@@ -1,5 +1,6 @@
 package ittallaght.youplanner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,24 +14,46 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class CalendarActivity extends AppCompatActivity
+public class ExerciseRegieme extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    FloatingActionButton fab_diet;
+    boolean isOpen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
+        setContentView(R.layout.activity_exercise_regieme);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        fab_diet = (FloatingActionButton) findViewById(R.id.fab_diet);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+
+                if(isOpen){}
+
+                else{
+                    fab_diet.setVisibility(View.VISIBLE);
+                    fab_diet.setClickable(true);
+                    isOpen = true;
+                }
             }
         });
+
+        fab_diet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registerIntent = new Intent(ExerciseRegieme.this, DietPlanner.class);
+                ExerciseRegieme.this.startActivity(registerIntent);
+            }
+        });
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -55,7 +78,7 @@ public class CalendarActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.calendar, menu);
+        getMenuInflater().inflate(R.menu.exercise_regieme, menu);
         return true;
     }
 
