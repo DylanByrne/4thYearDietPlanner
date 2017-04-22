@@ -1,73 +1,63 @@
 package ittallaght.youplanner;
 
 /**
- * Created by dylan on 08/02/2017.
+ * Created by dylan on 21/04/2017.
  */
 
 public class User {
 
-    @com.google.gson.annotations.SerializedName("name")
-    private String name;
-    @com.google.gson.annotations.SerializedName("email")
-    private String email;
-    @com.google.gson.annotations.SerializedName("age")
-    private int age;
-    @com.google.gson.annotations.SerializedName("password")
-    private String password;
-    @com.google.gson.annotations.SerializedName("id")
-    private int mId;
-
-    //Getter and Setter Methods
-
-    public void setName(String nameIn){
-        this.name = nameIn;
-    }
-
-    public String getName(){
-        return this.name;
-    }
-
-    public void setEmail(String emailIn){
-        this.email = emailIn;
-    }
-
-    public String getEmail(){
-        return this.email;
-    }
-
-    public void setAge(int ageIn){
-        this.age = ageIn;
-    }
-
-    public int getAge(){
-        return this.age;
-    }
-
-    public void setPassword(String passwordIn){
-        this.password = passwordIn;
-    }
-
-    public String getPassword(){
-        return this.password;
-    }
-
-    //Default Constructor
-    public User(){}
-
-    public void setId(int idIn){
-        this.mId = idIn;
-    }
+    int id;
+    String name;
+    String email;
+    String password;
+    int age;
+    double height;
+    double weight;
+    String gender;
+    double calories;
 
     public int getId(){
-        return this.mId;
+        return id;
+    }
+    public String getNsme(){
+        return name;
+    }
+    public String getEmail(){
+        return email;
+    }
+    public String getPassword(){
+        return password;
+    }
+    public String getGender(){
+        return gender;
+    }
+    public double getHeight(){
+        return height;
+    }
+    public double getWeight(){
+        return weight;
+    }
+    public int getAge(){
+        return age;
+    }
+    public double getCalories(){
+        return calories;
+    }
+    public User(){};
+
+
+    public User( int id,String name, String email, String password, int age,  double height, double weight, String gender, double calories){
+        this.id =id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.gender = gender;
+        this.calories = calories;
     }
 
-    public User(String name, String email, int age, String password, int id){
-        this.setName(name);
-        this.setEmail(email);
-        this.setAge(age);
-        this.setPassword(password);
-        this.setId(id);
-    }
+
 
 }

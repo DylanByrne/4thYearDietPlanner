@@ -11,15 +11,36 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="ittallaght.youplanner.DietPlanner"
-    tools:showIn="@layout/app_bar_diet_planner">
+    tools:showIn="@layout/activity_diet_planner">
 
-    <CalendarView
+    <TextView
+        android:text="Diet Planner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/calendarView"
-        android:layout_marginTop="42dp"
+        android:id="@+id/tvTitle"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+    <CalendarView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="30dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/cDiet"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="320dp" />
+
+    <Button
+        android:text="Add Diet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bAddDiet"
+        android:layout_below="@+id/cDiet"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

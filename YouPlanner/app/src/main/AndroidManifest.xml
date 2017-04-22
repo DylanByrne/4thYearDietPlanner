@@ -2,47 +2,131 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ittallaght.youplanner">
 
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/freshapple"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".RegisterActivity"
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainMenuActivity"
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DietPlanner"
             android:label="@string/title_activity_diet_planner"
-            android:parentActivityName=".LoginActivity"
+            android:parentActivityName=".MainMenuActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="ittallaght.youplanner.LoginActivity" />
+                android:value="ittallaght.youplanner.MainMenuActivity" />
         </activity>
         <activity
-            android:name=".ExerciseRegieme"
-            android:label="@string/title_activity_exercise_regieme"
+            android:name=".DietForumActivity"
+            android:label="@string/title_activity_diet_forum"
             android:parentActivityName=".DietPlanner"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ittallaght.youplanner.DietPlanner" />
+        </activity>
+        <activity
+            android:name=".PasswordRecoveryActivity"
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DietEditActivity"
+            android:label="@string/title_activity_diet_edit"
+            android:parentActivityName=".DietPlanner"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CatalogueForum"
+            android:label="@string/title_activity_catalogue_forum"
+            android:parentActivityName=".CatalogueActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CatalogueActivity"
+            android:label="@string/title_activity_catalogue"
+            android:parentActivityName=".MainMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ExercisePlanner"
+            android:label="@string/title_activity_exercise_planner"
+            android:parentActivityName=".MainMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ittallaght.youplanner.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".ExerciseForumActivity"
+            android:label="@string/title_activity_exercise_forum"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ExerciseEditActivity"
+            android:label="@string/title_activity_exercise_edit"
+            android:parentActivityName=".ExercisePlanner"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ittallaght.youplanner.ExercisePlanner" />
+        </activity>
+        <activity
+            android:name=".ExerciseCatalogueActivity"
+            android:label="@string/title_activity_exercise_catalogue"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ExerciseCatalogueForumActivity"
+            android:label="@string/title_activity_exercise_catalogue_forum"
+            android:parentActivityName=".ExerciseCatalogueActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ittallaght.youplanner.ExerciseCatalogueActivity" />
+        </activity>
+        <activity
+            android:name=".WeightEditActivity"
+            android:label="@string/title_activity_weight_edit"
+            android:parentActivityName=".UserDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ittallaght.youplanner.MainMenuActivity" />
+        </activity>
+        <activity
+            android:name=".UserDetails"
+            android:label="@string/title_activity_user_details"
+            android:parentActivityName=".MainMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ittallaght.youplanner.MainMenuActivity" />
         </activity>
     </application>
 

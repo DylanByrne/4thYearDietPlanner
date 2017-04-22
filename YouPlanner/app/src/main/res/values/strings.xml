@@ -1,11 +1,17 @@
 <resources>
-    <string name="app_name">YouPlanner</string>
-    <string name="title_activity_calendar">CalendarActivity</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_diet_planner">DietPlanner</string>
-    <string name="title_activity_exercise_regieme">ExerciseRegieme</string>
+    <string name="app_name">You Planner</string>
+    <string name="title_activity_main_menu">You Planner</string>
+    <string name="title_activity_diet_planner">You Planner</string>
+    <string name="title_activity_diet_forum">You Planner</string>
+    <string name="title_activity_diet_edit">You Planner</string>
+    <string name="title_activity_catalogue_forum">You Planner</string>
+    <string name="title_activity_catalogue">You Planner</string>
+    <string name="title_activity_exercise_planner">You Planner</string>
+    <string name="title_activity_exercise_forum">You Planner</string>
+    <string name="title_activity_planner_exercise">You Planner</string>
+    <string name="title_activity_exercise_edit">You Planner</string>
+    <string name="title_activity_exercise_catalogue">You Planner</string>
+    <string name="title_activity_exercise_catalogue_forum">You Planner</string>
+    <string name="title_activity_weight_edit">You Planner</string>
+    <string name="title_activity_user_details">UserDetails</string>
 </resources>

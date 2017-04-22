@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "ittallaght.youplanner"
         minSdkVersion 15
@@ -26,16 +26,8 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:design:24.2.1'
-    compile 'com.android.volley:volley:1.0.0'
-    compile 'com.android.support:design:24.2.1'
+
+    compile 'com.github.sundeepk:compact-calendar-view:2.0.1'
+
     testCompile 'junit:junit:4.12'
-    compile 'com.google.code.gson:gson:2.3'
-    compile 'com.google.guava:guava:18.0'
-    compile 'com.squareup.okhttp:okhttp:2.5.0'
-    compile 'com.microsoft.azure:azure-mobile-android:3.1.0'
-    compile (group: 'com.microsoft.azure', name: 'azure-notifications-handler', version: '1.0.1', ext: 'jar')
-
-    compile 'com.microsoft.azure:azure-mobile-android:3.1.0'
-
-
 }
